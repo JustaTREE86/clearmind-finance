@@ -49,7 +49,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="container navbar-inner">
         <Link to="/" className="navbar-logo" onClick={() => setOpen(false)}>
-          <img src="/assets/logo-icon.png" alt="ClearMind Finance" />
+          <span className="navbar-brand">
+            <span className="brand-clear">Clear</span><span className="brand-mind">Mind</span>
+          </span>
         </Link>
         <button className="nav-toggle" onClick={() => setOpen(o => !o)} aria-label="Toggle menu">
           <span /><span /><span />
@@ -75,7 +77,9 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-col">
             <div className="footer-logo">
-              <img src="/assets/logo-icon.png" alt="ClearMind Finance" />
+              <span className="navbar-brand" style={{fontSize:'1.4rem'}}>
+                <span className="brand-clear">Clear</span><span className="brand-mind">Mind</span>
+              </span>
             </div>
             <p className="footer-tagline">Educate. Navigate. Elevate.</p>
             <p style={{marginTop:'1rem',fontSize:'0.9rem'}}>
