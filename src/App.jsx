@@ -104,7 +104,6 @@ function Footer() {
             <h4 style={{marginTop:'1.5rem'}}>Contact</h4>
             <ul>
               <li><a href="mailto:hello@clearmindfinance.com.au">hello@clearmindfinance.com.au</a></li>
-              <li><a href="tel:0478560696">0478 560 696</a></li>
             </ul>
           </div>
         </div>
@@ -124,7 +123,6 @@ const businessSchema = {
   "@type": "FinancialService",
   "name": "ClearMind Finance",
   "url": "https://clearmindfinance.com.au",
-  "telephone": "0478560696",
   "email": "hello@clearmindfinance.com.au",
   "description": "Asset finance broker helping Australians secure vehicle, equipment and personal finance with automated lender matching and fast approvals.",
   "slogan": "Educate. Navigate. Elevate.",
@@ -320,7 +318,7 @@ function AboutPage() {
               <img src="/assets/banner-landscape.png" alt="ClearMind Finance" className="about-img" />
             </div>
             <div>
-              <h2>Josh Marien<br /><span className="blue" style={{fontSize:'1rem',fontWeight:600}}>Founder · ClearMind Finance</span></h2>
+              <h2>Josh<br /><span className="blue" style={{fontSize:'1rem',fontWeight:600}}>Founder · ClearMind Finance</span></h2>
               <p style={{marginTop:'1rem'}}>
                 I've been in finance since 2015. Consumer lending. Credit management. Then ten years deep in asset finance broking — sitting in the top 5 nationally at the place I worked, nominated for Adviser Broker of the Year.
               </p>

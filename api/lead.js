@@ -41,7 +41,7 @@ export default async function handler(req, res) {
         <p>I've received your details and will be in touch within 1 business day — usually much faster.</p>
         <p>In the meantime, if anything changes or you have a question, just reply to this email.</p>
         <br/>
-        <p><strong>Josh Marien</strong><br/>ClearMind Finance<br/>0478 560 696</p>
+        <p><strong>Josh</strong><br/>ClearMind Finance</p>
         <p style="font-size:12px;color:#888;">Educate. Navigate. Elevate.</p>
       `,
     })
