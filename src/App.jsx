@@ -79,7 +79,7 @@ function Footer() {
             </div>
             <p className="footer-tagline">Educate. Navigate. Elevate.</p>
             <p style={{marginTop:'1rem',fontSize:'0.9rem'}}>
-              Smart finance solutions for Australians who deserve better than a bank knockback.
+              Vehicle and equipment finance for tradies, ABN holders, and the bank-rejected. Real broker, real answers.
             </p>
           </div>
           <div className="footer-col">
@@ -122,7 +122,7 @@ const businessSchema = {
   "url": "https://clearmindfinance.com.au",
   "telephone": "0478560696",
   "email": "hello@clearmindfinance.com.au",
-  "description": "Asset finance broker helping Australians secure vehicle, equipment and personal finance with smart automation.",
+  "description": "Asset finance broker helping Australians secure vehicle, equipment and personal finance with automated lender matching and fast approvals.",
   "slogan": "Educate. Navigate. Elevate.",
   "address": {
     "@type": "PostalAddress",
@@ -142,7 +142,7 @@ function HomePage() {
     <>
       <PageHead
         title="ClearMind Finance | Educate. Navigate. Elevate."
-        description="ClearMind Finance uses smart automation to get your asset finance approved faster. Vehicle, equipment, self-employed and bad credit finance across Australia."
+        description="ClearMind Finance uses automated lender matching to get your asset finance approved faster. Vehicle, equipment, self-employed and bad credit finance across Australia."
         canonical="https://clearmindfinance.com.au/"
         jsonLd={businessSchema}
       />
@@ -152,18 +152,18 @@ function HomePage() {
         <div className="hero-bg" />
         <div className="container hero-grid">
           <div>
-            <div className="hero-eyebrow">Smart Finance. Real Results.</div>
+            <div className="hero-eyebrow">For tradies, ABN holders & the bank-rejected</div>
             <h1 className="hero-title">
-              Finance,<br />
-              <span className="blue">without the friction.</span>
+              The bank said no.<br />
+              <span className="blue">We say what ute do you want?</span>
             </h1>
             <p className="hero-tagline">Educate. Navigate. Elevate.</p>
             <p className="hero-sub">
-              We use intelligent automation to match you with the right lender and get your deal across the line — faster than the old way.
+              Vehicle and equipment finance for self-employed Australians the big four send to voicemail. Real broker. Automated paperwork. Your gear, faster.
             </p>
             <div className="hero-actions">
-              <Link to="/apply" className="btn btn-primary">Apply Now →</Link>
-              <Link to="/calculator" className="btn btn-outline">Repayment Calculator</Link>
+              <Link to="/apply" className="btn btn-primary">Get Me Funded →</Link>
+              <Link to="/calculator" className="btn btn-outline">Crunch the Numbers</Link>
             </div>
           </div>
           <div className="hero-image-wrap">
@@ -180,20 +180,20 @@ function HomePage() {
       <div className="stats-bar">
         <div className="container stats-inner">
           <div className="stat">
-            <div className="stat-num">5+</div>
-            <div className="stat-label">Years Experience</div>
+            <div className="stat-num">10+</div>
+            <div className="stat-label">Years in finance</div>
           </div>
           <div className="stat">
             <div className="stat-num">30+</div>
-            <div className="stat-label">Lender Panel</div>
+            <div className="stat-label">Lenders. Real ones.</div>
           </div>
           <div className="stat">
-            <div className="stat-num">Fast</div>
-            <div className="stat-label">Same-Day Assessment</div>
+            <div className="stat-num">24hr</div>
+            <div className="stat-label">Most approvals</div>
           </div>
           <div className="stat">
-            <div className="stat-num">Free</div>
-            <div className="stat-label">No Upfront Cost</div>
+            <div className="stat-num">$0</div>
+            <div className="stat-label">You pay us nothing</div>
           </div>
         </div>
       </div>
@@ -202,15 +202,15 @@ function HomePage() {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Simple Process</span>
-            <h2>Three steps to approved</h2>
-            <p>No paperwork mountains. No waiting weeks. Our automated process does the heavy lifting.</p>
+            <span className="section-tag">How it works</span>
+            <h2>From "I need finance" to keys in your hand</h2>
+            <p>No paperwork mountain. No three-week silent treatment. Just a broker who actually picks up the phone — and tech that does the boring stuff in the background.</p>
           </div>
           <div className="steps-grid">
             {[
-              { n: '1', title: 'Tell us what you need', body: 'Fill in our quick application. Takes 3 minutes. No credit check at this stage.' },
-              { n: '2', title: 'We find your match', body: 'Our system cross-checks 30+ lenders against your situation and identifies the best fit.' },
-              { n: '3', title: 'Get approved', body: 'We lodge the application, manage the process, and get your answer fast — often same day.' },
+              { n: '1', title: 'Tell me your situation', body: '3-minute form. No credit check yet. Be honest — knockbacks, defaults, ABN income, all of it. The more I know, the better I can fight for you.' },
+              { n: '2', title: 'I match you to the right lender', body: 'Automated lender matching cross-checks your situation against 30+ specialist lenders. The ones who say yes to self-employed. The ones who look past a stumble.' },
+              { n: '3', title: 'Approved. Funded. Done.', body: 'I lodge it, push it through, chase it down. Most approvals back inside 24 hours. You drive away. I move on to the next one.' },
             ].map(s => (
               <div key={s.n} className="card">
                 <div className="step-num">{s.n}</div>
@@ -226,16 +226,16 @@ function HomePage() {
       <section className="section" style={{paddingTop:0}}>
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">What We Finance</span>
-            <h2>Whatever you need, we've got a lender for it</h2>
+            <span className="section-tag">What I finance</span>
+            <h2>If it earns you money or gets you there — I can finance it</h2>
           </div>
           <div className="types-grid">
             {[
-              { icon: '🚗', title: 'Vehicle Finance', body: 'Cars, utes, vans, trucks. New or used.' },
-              { icon: '🏗️', title: 'Equipment Finance', body: 'Tools, machinery, trailers, yellow goods.' },
-              { icon: '🧾', title: 'Self-Employed', body: 'ABN holders, low-doc, sole traders welcome.' },
-              { icon: '📉', title: 'Bad Credit', body: "Knockbacks happen. We find lenders who look past them." },
-              { icon: '🔄', title: 'Refinance', body: 'Better rate on an existing loan? Let us check.' },
+              { icon: '🛻', title: 'Utes & Vehicles', body: 'Work utes, vans, family cars, trucks. New, used, private sale — all in.' },
+              { icon: '🚜', title: 'Equipment & Machinery', body: 'Trailers, tools, excavators, yellow goods. Anything that earns you a quid.' },
+              { icon: '🧾', title: 'ABN & Self-Employed', body: 'No payslips? No worries. Low-doc and no-doc options for sole traders.' },
+              { icon: '🛡️', title: 'Bad Credit', body: 'Default? Discharged bankrupt? Recent knockback? Still options on the table.' },
+              { icon: '♻️', title: 'Refinance', body: "Stuck on a shit rate? Let's see if we can drop it." },
             ].map(t => (
               <Link to="/apply" key={t.title} className="card type-card" style={{textDecoration:'none'}}>
                 <span className="type-icon">{t.icon}</span>
@@ -251,27 +251,27 @@ function HomePage() {
       <section className="section" style={{background:'var(--navy-mid)'}}>
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Our Philosophy</span>
-            <h2>Why ClearMind?</h2>
+            <span className="section-tag">How we work</span>
+            <h2>Three words. Every deal.</h2>
           </div>
           <div className="pillars-grid">
             <div className="card pillar">
               <div className="pillar-letter">E</div>
               <div className="pillar-word">Educate</div>
-              <h3>Know your options</h3>
-              <p>We explain what lenders actually look at, what your rate means, and what to expect — in plain English, not banker speak.</p>
+              <h3>You'll know what you're signing</h3>
+              <p>Plain English. What the rate means, what the fees cost, what comparison rate actually is. No banker-speak, no fine-print games.</p>
             </div>
             <div className="card pillar">
               <div className="pillar-letter">N</div>
               <div className="pillar-word">Navigate</div>
-              <h3>Find the right path</h3>
-              <p>Not every lender suits every situation. We know the panel, we know the policies, and we know how to get your deal structured correctly.</p>
+              <h3>I find the lender who says yes</h3>
+              <p>Banks have a box. If you don't fit, you're out. I know which specialist lenders look at ABN income, recent defaults, low deposits — and how to structure the deal so it lands.</p>
             </div>
             <div className="card pillar">
               <div className="pillar-letter">E</div>
               <div className="pillar-word">Elevate</div>
-              <h3>Get where you want to be</h3>
-              <p>Finance is a tool. We help you use it to move forward — whether that's a new vehicle, business equipment, or building your credit history.</p>
+              <h3>One deal closer to where you want to be</h3>
+              <p>Finance isn't the goal. The ute is. The excavator is. The business growth is. I'm here to clear the path so you can get on with it.</p>
             </div>
           </div>
         </div>
@@ -280,11 +280,11 @@ function HomePage() {
       {/* CTA */}
       <section className="cta-section">
         <div className="container">
-          <h2>Ready to <span className="blue">clear your path?</span></h2>
-          <p>Free assessment. No obligation. No credit check to get started.</p>
+          <h2>Done waiting on the <span className="blue">bank?</span></h2>
+          <p>3 minutes. No credit check at this stage. No fee to you, ever.</p>
           <div style={{display:'flex',gap:'1rem',justifyContent:'center',flexWrap:'wrap'}}>
-            <Link to="/apply" className="btn btn-primary">Apply Now →</Link>
-            <Link to="/about" className="btn btn-outline">Meet Your Broker</Link>
+            <Link to="/apply" className="btn btn-primary">Get Me Funded →</Link>
+            <Link to="/about" className="btn btn-outline">Who Am I?</Link>
           </div>
         </div>
       </section>
@@ -304,9 +304,9 @@ function AboutPage() {
       />
       <div className="page-hero">
         <div className="container">
-          <span className="section-tag">Your Broker</span>
-          <h1>A broker who actually<br /><span className="blue">picks up the phone.</span></h1>
-          <p>ClearMind Finance exists because finance shouldn't be confusing, slow, or full of runaround.</p>
+          <span className="section-tag">The Broker</span>
+          <h1>I'm the guy<br /><span className="blue">who picks up the phone.</span></h1>
+          <p>Ten years in finance. Top performer at one of the biggest asset finance lenders in the country. Now doing it my way.</p>
         </div>
       </div>
       <section className="section">
@@ -316,21 +316,25 @@ function AboutPage() {
               <img src="/assets/banner-landscape.png" alt="ClearMind Finance" className="about-img" />
             </div>
             <div>
-              <h2>Josh Marien<br /><span className="blue" style={{fontSize:'1rem',fontWeight:600}}>Asset Finance Broker</span></h2>
+              <h2>Josh Marien<br /><span className="blue" style={{fontSize:'1rem',fontWeight:600}}>Founder · ClearMind Finance</span></h2>
               <p style={{marginTop:'1rem'}}>
-                I've been in finance since 2015 — across consumer lending, credit management, and now asset finance broking. I've seen how banks treat people when their situation doesn't fit the box. ClearMind Finance is built on doing it differently.
+                I've been in finance since 2015. Consumer lending. Credit management. Then ten years deep in asset finance broking — sitting in the top 5 nationally at the place I worked, nominated for Adviser Broker of the Year.
               </p>
               <p style={{marginTop:'1rem'}}>
-                I use technology to speed up the process — automated lender matching, digital doc collection, fast lodgement — but the conversation is always with a real person who knows your file.
+                I started ClearMind because I'm sick of watching good people get knocked back by banks who never bothered to read the file. ABN holders. Tradies. People with a stumble on their credit. The banks have a box, and if you don't fit it, you're out. I know which lenders actually look at you — and how to package the deal so the answer is yes.
+              </p>
+              <p style={{marginTop:'1rem'}}>
+                Technology runs the boring stuff in the background. Real human runs the phone call. That's the deal.
               </p>
               <ul className="credential-list" style={{marginTop:'1.5rem'}}>
                 <li>Cert IV Finance Broking</li>
-                <li>5+ years asset finance experience</li>
-                <li>Access to 30+ lender panel</li>
-                <li>Vehicle, equipment & personal finance specialist</li>
-                <li>Brisbane-based, Australia-wide service</li>
+                <li>10+ years in consumer & asset finance</li>
+                <li>Top 5 nationally at previous broker role</li>
+                <li>Nominated — Adviser Broker of the Year</li>
+                <li>30+ specialist lender panel</li>
+                <li>Brisbane-based · Australia-wide service</li>
               </ul>
-              <Link to="/apply" className="btn btn-primary" style={{marginTop:'2rem'}}>Work with me →</Link>
+              <Link to="/apply" className="btn btn-primary" style={{marginTop:'2rem'}}>Let's go →</Link>
             </div>
           </div>
         </div>
@@ -369,9 +373,9 @@ function ApplyPage() {
       />
       <div className="page-hero">
         <div className="container">
-          <span className="section-tag">Get Started</span>
-          <h1>Let's find your <span className="blue">finance solution.</span></h1>
-          <p>Takes 3 minutes. Free assessment. No credit check at this stage.</p>
+          <span className="section-tag">Let's go</span>
+          <h1>Tell me what you <span className="blue">actually need.</span></h1>
+          <p>3 minutes. No credit check yet. The more you tell me up front, the harder I can fight for you.</p>
         </div>
       </div>
       <section className="section" style={{paddingTop:'2rem'}}>
