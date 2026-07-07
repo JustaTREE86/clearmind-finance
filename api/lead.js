@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     // Notify Josh
     await resend.emails.send({
       from: 'leads@clearmindfinance.com.au',
-      to: 'joshmarien@outlook.com',
+      to: ['josh@clearmindfinance.com.au', 'joshmarien@outlook.com'],
       reply_to: email,
       subject: `New lead — ${displayName} | ${financeType || source}`,
       html: `

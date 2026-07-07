@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import { trackLead } from './analytics.js'
 
 // ── SEO helpers ──────────────────────────────────────────────────────────────
 
@@ -361,6 +362,7 @@ function ApplyPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...data, source: 'apply-page' }),
       })
+      trackLead('apply-page')
     } catch (_) {}
     setLoading(false)
     setSubmitted(true)
@@ -490,6 +492,7 @@ function CalculatorPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, source: 'calculator', amount, rate, term, monthly: monthly.toFixed(2) }),
       })
+      trackLead('calculator')
     } catch (_) {}
     setLeadSent(true)
   }
