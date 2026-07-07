@@ -138,6 +138,17 @@ const businessSchema = {
   "priceRange": "Free consultation"
 }
 
+function webPageSchema(name, description, url) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    description,
+    url,
+    "isPartOf": { "@type": "WebSite", "name": "ClearMind Finance", "url": "https://clearmindfinance.com.au" },
+  }
+}
+
 // ── Home page ─────────────────────────────────────────────────────────────────
 
 function HomePage() {
@@ -145,7 +156,7 @@ function HomePage() {
     <>
       <PageHead
         title="ClearMind Finance | Educate. Navigate. Elevate."
-        description="ClearMind Finance uses automated lender matching to get your asset finance approved faster. Vehicle, equipment, self-employed and bad credit finance across Australia."
+        description="ClearMind Finance uses automated lender matching to get your asset finance approved faster. Vehicle, equipment and bad credit finance, Australia-wide."
         canonical="https://clearmindfinance.com.au/"
         jsonLd={businessSchema}
       />
@@ -171,7 +182,7 @@ function HomePage() {
           </div>
           <div className="hero-image-wrap">
             <img
-              src="/assets/banner-square.png"
+              src="/assets/banner-square.webp"
               alt="ClearMind Finance — Educate Navigate Elevate"
               className="hero-image"
             />
@@ -304,6 +315,11 @@ function AboutPage() {
         title="About ClearMind Finance | Brisbane Asset Finance Broker"
         description="Meet Josh — asset finance broker with 5+ years experience helping Australians secure vehicle, equipment and business finance. Based in Brisbane, QLD."
         canonical="https://clearmindfinance.com.au/about"
+        jsonLd={webPageSchema(
+          "About ClearMind Finance",
+          "Meet Josh — asset finance broker helping Australians secure vehicle, equipment and business finance.",
+          "https://clearmindfinance.com.au/about"
+        )}
       />
       <div className="page-hero">
         <div className="container">
@@ -316,7 +332,7 @@ function AboutPage() {
         <div className="container">
           <div className="about-grid">
             <div>
-              <img src="/assets/banner-landscape.png" alt="ClearMind Finance" className="about-img" />
+              <img src="/assets/banner-landscape.webp" alt="Josh, founder of ClearMind Finance" className="about-img" />
             </div>
             <div>
               <h2>Josh<br /><span className="blue" style={{fontSize:'1rem',fontWeight:600}}>Founder · ClearMind Finance</span></h2>
@@ -374,6 +390,11 @@ function ApplyPage() {
         title="Apply for Finance | ClearMind Finance"
         description="Start your finance application with ClearMind Finance. Free assessment, no obligation, no credit check to get started. Vehicle, equipment and personal finance."
         canonical="https://clearmindfinance.com.au/apply"
+        jsonLd={webPageSchema(
+          "Apply for Finance",
+          "Start a finance application with ClearMind Finance — free assessment, no obligation, no credit check to get started.",
+          "https://clearmindfinance.com.au/apply"
+        )}
       />
       <div className="page-hero">
         <div className="container">
@@ -503,6 +524,11 @@ function CalculatorPage() {
         title="Loan Repayment Calculator | ClearMind Finance"
         description="Calculate your estimated monthly repayments for a car loan, equipment finance or personal loan. Free calculator from ClearMind Finance."
         canonical="https://clearmindfinance.com.au/calculator"
+        jsonLd={webPageSchema(
+          "Loan Repayment Calculator",
+          "Calculate estimated monthly repayments for a car loan, equipment finance or personal loan.",
+          "https://clearmindfinance.com.au/calculator"
+        )}
       />
       <div className="page-hero">
         <div className="container">
@@ -605,6 +631,11 @@ function PrivacyPage() {
         title="Privacy Policy | ClearMind Finance"
         description="ClearMind Finance privacy policy. How we collect, use and protect your personal information."
         canonical="https://clearmindfinance.com.au/privacy"
+        jsonLd={webPageSchema(
+          "Privacy Policy",
+          "ClearMind Finance privacy policy — how we collect, use and protect your personal information.",
+          "https://clearmindfinance.com.au/privacy"
+        )}
       />
       <div className="page-hero">
         <div className="container"><h1>Privacy Policy</h1><p>Last updated: May 2026</p></div>
@@ -640,6 +671,11 @@ function TermsPage() {
         title="Terms of Use | ClearMind Finance"
         description="ClearMind Finance terms of use and service conditions."
         canonical="https://clearmindfinance.com.au/terms"
+        jsonLd={webPageSchema(
+          "Terms of Use",
+          "ClearMind Finance terms of use and service conditions.",
+          "https://clearmindfinance.com.au/terms"
+        )}
       />
       <div className="page-hero">
         <div className="container"><h1>Terms of Use</h1><p>Last updated: May 2026</p></div>
