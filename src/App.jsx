@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { trackLead } from './analytics.js'
+import { PAGES } from './seo-data.js'
 
 // ── SEO helpers ──────────────────────────────────────────────────────────────
 
@@ -117,49 +118,12 @@ function Footer() {
   )
 }
 
-// ── JSON-LD schemas ───────────────────────────────────────────────────────────
-
-const businessSchema = {
-  "@context": "https://schema.org",
-  "@type": "FinancialService",
-  "name": "ClearMind Finance",
-  "url": "https://clearmindfinance.com.au",
-  "email": "hello@clearmindfinance.com.au",
-  "description": "Asset finance broker helping Australians secure vehicle, equipment and personal finance with automated lender matching and fast approvals.",
-  "slogan": "Educate. Navigate. Elevate.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Thornlands",
-    "addressRegion": "QLD",
-    "postalCode": "4164",
-    "addressCountry": "AU"
-  },
-  "areaServed": "AU",
-  "priceRange": "Free consultation"
-}
-
-function webPageSchema(name, description, url) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name,
-    description,
-    url,
-    "isPartOf": { "@type": "WebSite", "name": "ClearMind Finance", "url": "https://clearmindfinance.com.au" },
-  }
-}
-
 // ── Home page ─────────────────────────────────────────────────────────────────
 
 function HomePage() {
   return (
     <>
-      <PageHead
-        title="ClearMind Finance | Educate. Navigate. Elevate."
-        description="ClearMind Finance uses automated lender matching to get your asset finance approved faster. Vehicle, equipment and bad credit finance, Australia-wide."
-        canonical="https://clearmindfinance.com.au/"
-        jsonLd={businessSchema}
-      />
+      <PageHead {...PAGES['/']} />
 
       {/* Hero */}
       <section className="hero">
@@ -311,16 +275,7 @@ function HomePage() {
 function AboutPage() {
   return (
     <>
-      <PageHead
-        title="About ClearMind Finance | Brisbane Asset Finance Broker"
-        description="Meet Josh — asset finance broker with 5+ years experience helping Australians secure vehicle, equipment and business finance. Based in Brisbane, QLD."
-        canonical="https://clearmindfinance.com.au/about"
-        jsonLd={webPageSchema(
-          "About ClearMind Finance",
-          "Meet Josh — asset finance broker helping Australians secure vehicle, equipment and business finance.",
-          "https://clearmindfinance.com.au/about"
-        )}
-      />
+      <PageHead {...PAGES['/about']} />
       <div className="page-hero">
         <div className="container">
           <span className="section-tag">The Broker</span>
@@ -386,16 +341,7 @@ function ApplyPage() {
 
   return (
     <>
-      <PageHead
-        title="Apply for Finance | ClearMind Finance"
-        description="Start your finance application with ClearMind Finance. Free assessment, no obligation, no credit check to get started. Vehicle, equipment and personal finance."
-        canonical="https://clearmindfinance.com.au/apply"
-        jsonLd={webPageSchema(
-          "Apply for Finance",
-          "Start a finance application with ClearMind Finance — free assessment, no obligation, no credit check to get started.",
-          "https://clearmindfinance.com.au/apply"
-        )}
-      />
+      <PageHead {...PAGES['/apply']} />
       <div className="page-hero">
         <div className="container">
           <span className="section-tag">Let's go</span>
@@ -520,16 +466,7 @@ function CalculatorPage() {
 
   return (
     <>
-      <PageHead
-        title="Loan Repayment Calculator | ClearMind Finance"
-        description="Calculate your estimated monthly repayments for a car loan, equipment finance or personal loan. Free calculator from ClearMind Finance."
-        canonical="https://clearmindfinance.com.au/calculator"
-        jsonLd={webPageSchema(
-          "Loan Repayment Calculator",
-          "Calculate estimated monthly repayments for a car loan, equipment finance or personal loan.",
-          "https://clearmindfinance.com.au/calculator"
-        )}
-      />
+      <PageHead {...PAGES['/calculator']} />
       <div className="page-hero">
         <div className="container">
           <span className="section-tag">Free Tool</span>
@@ -627,16 +564,7 @@ function CalculatorPage() {
 function PrivacyPage() {
   return (
     <>
-      <PageHead
-        title="Privacy Policy | ClearMind Finance"
-        description="ClearMind Finance privacy policy. How we collect, use and protect your personal information."
-        canonical="https://clearmindfinance.com.au/privacy"
-        jsonLd={webPageSchema(
-          "Privacy Policy",
-          "ClearMind Finance privacy policy — how we collect, use and protect your personal information.",
-          "https://clearmindfinance.com.au/privacy"
-        )}
-      />
+      <PageHead {...PAGES['/privacy']} />
       <div className="page-hero">
         <div className="container"><h1>Privacy Policy</h1><p>Last updated: May 2026</p></div>
       </div>
@@ -667,16 +595,7 @@ function PrivacyPage() {
 function TermsPage() {
   return (
     <>
-      <PageHead
-        title="Terms of Use | ClearMind Finance"
-        description="ClearMind Finance terms of use and service conditions."
-        canonical="https://clearmindfinance.com.au/terms"
-        jsonLd={webPageSchema(
-          "Terms of Use",
-          "ClearMind Finance terms of use and service conditions.",
-          "https://clearmindfinance.com.au/terms"
-        )}
-      />
+      <PageHead {...PAGES['/terms']} />
       <div className="page-hero">
         <div className="container"><h1>Terms of Use</h1><p>Last updated: May 2026</p></div>
       </div>
