@@ -109,7 +109,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} BrokenMind Software. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ClearMind Finance. All rights reserved.</p>
           <p>ClearMind Finance | Australian Credit Licence conditions apply. <a href="/privacy">Privacy Policy</a></p>
         </div>
       </div>
